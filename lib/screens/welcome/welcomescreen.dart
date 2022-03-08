@@ -67,7 +67,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   padding: const EdgeInsets.only(top: 10.0, bottom: 15),
                   child: Container(
                     child: AppButton(
-                      curentPage < 2 ? 'Next' : 'Done',
+                      text: curentPage < 2 ? 'Next' : 'Done',
                       onPressed: () {
                         if (curentPage < 2) {
                           _controller.nextPage(

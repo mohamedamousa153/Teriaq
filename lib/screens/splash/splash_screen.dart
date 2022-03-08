@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:find_doctor/screens/welcome/welcomescreen.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
             context,
             MaterialPageRoute(builder: (context) => WelcomeScreen()),
           );
+          // Navigator.of(context).pushNamed("WelcomeScreen");
         }),
       );
     });

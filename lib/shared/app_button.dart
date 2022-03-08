@@ -6,8 +6,8 @@ class AppButton extends StatelessWidget {
   final String text;
   Color bottenColor = Colors.blue;
   Color textColor = Colors.white;
-  AppButton(
-    this.text, {
+  AppButton({
+    required this.text,
     required this.bottenColor,
     required this.textColor,
     required this.borderradius,
