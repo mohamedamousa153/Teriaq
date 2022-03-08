@@ -14,7 +14,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   int curentPage = 0;
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                               duration: Duration(seconds: 1),
                               curve: Curves.easeInOut);
                         } else {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => RegistrationScreen()),
