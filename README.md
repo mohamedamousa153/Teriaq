@@ -1,3 +1,3 @@
 # find_doctor
 
-![](assets\images\notificationsTest.jpg)
+![](assets/images/notificationsTest.jpg)
