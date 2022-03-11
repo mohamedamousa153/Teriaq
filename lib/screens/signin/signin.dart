@@ -13,9 +13,12 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.blue),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -27,17 +30,21 @@ class SignIn extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(80),
-              color: Colors.white,
-            ),
-            child: Image(
-              image: AssetImage('assets/images/teriaq.PNG'),
-              height: 160,
-            ),
+          const CircleAvatar(
+            radius: 80,
+            backgroundImage: AssetImage('assets/images/teriaq.PNG'),
           ),
+          // Container(
+          //   clipBehavior: Clip.antiAlias,
+          //   decoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(80),
+          //     color: Colors.white,
+          //   ),
+          //   child: Image(
+          //     image: AssetImage('assets/images/teriaq.PNG'),
+          //     height: 160,
+          //   ),
+          // ),
           const SizedBox(
             height: 50,
           ),

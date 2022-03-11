@@ -12,36 +12,43 @@ class RegistrationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-            // leading: IconButton(
-            //   icon: Icon(Icons.arrow_back),
-            //   onPressed: () {
-            //     Navigator.pop(context);
-            //   },
-            // ),
-            ),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.blue),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  clipBehavior: Clip.antiAlias,
-                  child: Image(
-                    image: AssetImage('assets/images/teriaq.PNG'),
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(80),
-                    color: Colors.white,
-                  ),
-                  height: 150,
+                const CircleAvatar(
+                  radius: 100,
+                  backgroundImage: AssetImage('assets/images/teriaq.PNG'),
                 ),
+                // Container(
+                //   clipBehavior: Clip.antiAlias,
+                //   child: Image(
+                //     image: AssetImage('assets/images/teriaq.PNG'),
+                //   ),
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(80),
+                //     color: Colors.white,
+                //   ),
+                //   height: 150,
+                // ),
                 SizedBox(
-                  height: 200,
+                  height: 150,
                 ),
                 Text(
                   "Welacome To Teriag!",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(
                   height: 50,
@@ -63,7 +70,7 @@ class RegistrationScreen extends StatelessWidget {
                 ),
                 AppButton(
                   text: "Sign in",
-                  bottenColor: Colors.white,
+                  bottenColor: Color.fromARGB(255, 245, 244, 244),
                   textColor: Colors.blue,
                   borderradius: BorderRadius.circular(60),
                   onPressed: () {

@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:find_doctor/screens/registration/registration.dart';
 import 'package:find_doctor/shared/app_button.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +59,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.blue),
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RegistrationScreen()),
+                    );
+                  },
                   child: Text(
                     'skip',
                     style: TextStyle(fontSize: 20),
