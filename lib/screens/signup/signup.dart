@@ -12,24 +12,38 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.blue),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(children: [
             const SizedBox(
               height: 20,
             ),
-            Container(
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(200),
-                color: Colors.white,
-              ),
-              child: Image(
-                image: AssetImage('assets/images/teriaq.PNG'),
-                height: 100.h,
-              ),
+            const CircleAvatar(
+              radius: 60,
+              backgroundImage: AssetImage('assets/images/teriaq.PNG'),
             ),
+            // Container(
+            //   clipBehavior: Clip.antiAlias,
+            //   decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.circular(200),
+            //     color: Colors.white,
+            //   ),
+            //   child: Image(
+            //     image: AssetImage('assets/images/teriaq.PNG'),
+            //     height: 100.h,
+            //   ),
+            // ),
             SizedBox(
               height: 20.h,
             ),
